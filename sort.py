@@ -1,4 +1,4 @@
-class Sort:
+class Sorts:
 
     def bubble_sort(self, lst_nums: list) -> dict:
         passes = 0
@@ -22,3 +22,14 @@ class Sort:
             exchanges_per_pass[passes] = exchanges
 
         return exchanges_per_pass
+
+
+    def quick_sort(self, lst_nums: list):
+        length = len(lst_nums)
+        index_pivot = 0
+        if length % 2 != 0:
+            index_pivot = length // 2
+        else:
+            if length >= 4:
+                index_pivot = length // 2 - 1
+        return index_pivot
