@@ -23,6 +23,11 @@ class Sorts:
 
         return exchanges_per_pass
 
+    def insertion_sort(self, list_nums: list) -> list:
+        sorted_list = []
+        while len(list_nums) != 0:
+            sorted_list.append(list_nums.pop(min(list_nums)))
+        return sorted_list
 
     def quick_sort(self, lst_nums: list):
         length = len(lst_nums)
